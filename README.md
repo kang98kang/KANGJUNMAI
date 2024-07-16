@@ -1,0 +1,2 @@
+# KANGJUNMAI
+mini project
