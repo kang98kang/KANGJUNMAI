@@ -8,9 +8,9 @@ export default function RoutesSetup() {
   return (
         <Routes>
                 <Route path="/" element={<Navigate to="/Login" />} />
-                <Route path="/Login" index element={<LoginForm />} /> 
+                <Route path="/Login" element={<LoginForm />} /> 
                 <Route path="/" element={<Layout />}>
-                <Route path="/Main" element={<Main />} />
+                <Route path="/Main" index element={<Main />} />
                 </Route>
         </Routes>
     )

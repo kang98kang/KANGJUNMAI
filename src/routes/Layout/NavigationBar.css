@@ -1,0 +1,133 @@
+.head {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #c8c8c8;
+  border-bottom-width: 2px;
+}
+.head .inner {
+  display: flex;
+  position: relative;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 75px;
+  height: 75px;
+  justify-content: center;
+  margin: auto;
+}
+
+.head .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .main-menu .item__name {
+  height: 60px;
+  width: 60px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head .main-menu a {
+  height: 60px;
+  width: 60px;
+  margin: 0 40px;
+  padding: 18px 20px;
+}
+
+.head .main-menu a:before,
+.head .main-menu a:after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  content: "";
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s, height 0.3s;
+  -moz-transition: opacity 0.3s, height 0.3s;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+.head .main-menu a:after {
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.head .main-menu a span:first-child {
+  z-index: 9;
+  display: block;
+  font-weight: 300;
+}
+.head .main-menu a span:last-child {
+  width: 40px;
+  z-index: 1;
+  display: block;
+  padding: 10px 0 0 0;
+  color: black;
+  text-shadow: none;
+  text-transform: none;
+  font-style: italic;
+  font-size: 0.75em;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.head .main-menu a:hover:before,
+.head .main-menu a:focus:before {
+  height: 6px;
+}
+.head .main-menu a:hover:before,
+.head .main-menu a:hover:after,
+.head .main-menu a:focus:before,
+.head .main-menu a:focus:after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.head .main-menu a:hover span:last-child,
+.head .main-menu a:focus span:last-child {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/*BADGES*/
+.head .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+.head .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
