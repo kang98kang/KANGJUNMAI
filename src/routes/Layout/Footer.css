@@ -1,6 +1,10 @@
 .f1 {
   position: relative;
-  background-color: aqua;
   height: 80px;
   width: 100%;
+  background-color: white;
+  border-top: 1px solid #c8c8c8;
+  border-top-width: 2px;
+  align-content: center;
+  color: #c8c8c8;
 }

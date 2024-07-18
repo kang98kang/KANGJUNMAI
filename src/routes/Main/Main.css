@@ -3,3 +3,57 @@
   background-color: beige;
   top: 80px;
 }
+
+.visual {
+  margin-top: 80px;
+  background-image: url("../../Component/images/visual_bg.jpg");
+  background-position: center;
+}
+.visual .inner {
+  height: 646px;
+  min-width: 600px;
+  display: flex;
+}
+.visual .title {
+  position: absolute;
+  top: 200px;
+  left: -10px;
+}
+.visual .title .btn {
+  position: absolute;
+  top: 350px;
+  left: 250px;
+}
+.visual .cup1.image {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  right: -150px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+.visual .cup2.image {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  right: 130px;
+}
+.visual .cup2.text {
+  position: absolute;
+  top: 186px;
+  right: 412px;
+}
+.visual .spoon {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  top: 700px;
+  right: 240px;
+}
+.visual .fade-in {
+  opacity: 0;
+}
