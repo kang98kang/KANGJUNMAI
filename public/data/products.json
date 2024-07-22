@@ -4,34 +4,34 @@
     "name": "준마이 다이긴조",
     "price": 45000,
     "description": "최고급 쌀을 50% 이상 정미하여 만든 프리미엄 사케. 과일향이 풍부하고 부드러운 맛이 특징입니다.",
-    "image": "/images/junmai-daiginjo.jpg"
+    "image": "Gokyojunmai.jpg"
   },
   {
     "id": 2,
     "name": "긴조",
     "price": 35000,
     "description": "60% 정미된 쌀로 만든 고급 사케. 섬세한 향과 균형 잡힌 맛을 자랑합니다.",
-    "image": "/images/ginjo.jpg"
+    "image": "Hakkaisan.png"
   },
   {
     "id": 3,
     "name": "준마이",
     "price": 25000,
     "description": "순수한 쌀과 물만으로 만든 전통 사케. 쌀의 풍미가 깊고 감칠맛이 있습니다.",
-    "image": "/images/junmai.jpg"
+    "image": "Fukuchiyo.png"
   },
   {
     "id": 4,
     "name": "나마자케",
     "price": 30000,
     "description": "살균 처리를 하지 않은 생 사케. 신선하고 생동감 있는 맛이 특징입니다.",
-    "image": "/images/namazake.jpg"
+    "image": "badge3.jpg"
   },
   {
     "id": 5,
     "name": "니고리자케",
     "price": 28000,
     "description": "찹쌀을 사용해 만든 탁주 스타일의 사케. 독특한 질감과 풍부한 맛이 일품입니다.",
-    "image": "/images/nigorizake.jpg"
+    "image": "badge1.jpg"
   }
 ]

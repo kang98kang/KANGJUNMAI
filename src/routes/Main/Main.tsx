@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import "./Main.css";
-import Hakkaisan from "../../Component/images/Hakkaisan.png";
-import VisualCup1text from "../../Component/images/visual_cup1_text.png";
-import Fukuchiyo from "../../Component/images/Fukuchiyo.png";
-import VisualCup2text from "../../Component/images/visual_cup2_text.png";
-import Cup from "../../Component/images/cup.png";
-import VisualTitle from "../../Component/images/visual_title.png";
-import { fadeInElements } from "../../Component/fadeEls";
+import React, { useEffect } from 'react';
+import './Main.css';
+import Hakkaisan from '../../Component/images/Hakkaisan.png';
+import VisualCup1text from '../../Component/images/visual_cup1_text.png';
+import Fukuchiyo from '../../Component/images/Fukuchiyo.png';
+import VisualCup2text from '../../Component/images/visual_cup2_text.png';
+import Cup from '../../Component/images/cup.png';
+import VisualTitle from '../../Component/images/visual_title.png';
+import { fadeInElements } from '../../Component/fadeEls';
 
 const Main: React.FC = () => {
   useEffect(() => {
-    fadeInElements(".visual .fade-in");
+    fadeInElements('.visual .fade-in');
   }, []);
 
   return (

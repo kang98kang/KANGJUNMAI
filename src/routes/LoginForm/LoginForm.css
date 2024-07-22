@@ -1,6 +1,5 @@
 section {
-  background: url(C:\Users\USER\Desktop\miniproject\KANGJUNMAI\src\Component\Assets\wallpaperflare.com_wallpaper.jpg)
-    no-repeat;
+  background: url(../../Component/Assets/wallpaperflare.com_wallpaper.jpg) no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
