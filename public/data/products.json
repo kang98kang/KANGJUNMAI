@@ -4,7 +4,7 @@
     "name": "준마이 다이긴조",
     "price": 45000,
     "description": "최고급 쌀을 50% 이상 정미하여 만든 프리미엄 사케. 과일향이 풍부하고 부드러운 맛이 특징입니다.",
-    "image": "Gokyojunmai.jpg"
+    "image": "src/Component/images/Gokyojunmai.jpg"
   },
   {
     "id": 2,

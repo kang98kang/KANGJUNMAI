@@ -1,9 +1,9 @@
 // src/components/ProductDetail.js
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { useCart } from "../../contexts/CartContext";
-import "./ProductDetail.css";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useCart } from '../../contexts/CartContext';
+import './ProductDetail.css';
+import { Link } from 'react-router-dom';
 
 function ProductDetail() {
   const [product, setProduct] = useState(null);
@@ -17,9 +17,9 @@ function ProductDetail() {
       try {
         setLoading(true);
         const searchParams = new URLSearchParams(location.search);
-        const id = searchParams.get("id");
+        const id = searchParams.get('id');
 
-        const response = await fetch("/data/products.json");
+        const response = await fetch('/data/products.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -29,11 +29,11 @@ function ProductDetail() {
         if (foundProduct) {
           setProduct(foundProduct);
         } else {
-          setError("상품을 찾을 수 없습니다.");
+          setError('상품을 찾을 수 없습니다.');
         }
       } catch (error) {
-        console.error("상품 정보를 가져오는데 실패했습니다:", error);
-        setError("상품 정보를 불러올 수 없습니다. 나중에 다시 시도해주세요.");
+        console.error('상품 정보를 가져오는데 실패했습니다:', error);
+        setError('상품 정보를 불러올 수 없습니다. 나중에 다시 시도해주세요.');
       } finally {
         setLoading(false);
       }
