@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Product.css';
+import './ProductList.css';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -44,7 +44,7 @@ function ProductList() {
               <li key={product.id} className="product-item">
                 <Link to={`/ProductDetail?id=${product.id}`} className="product-link">
                   <div style={{ backgroundImage: `url(${product.image})` }} className="product-image" />
-                  <h1 className="product-name">{product.name}</h1>
+                  <div className="product-name">{product.name}</div>
                   <p className="product-price">{product.price}원</p>
                 </Link>
               </li>

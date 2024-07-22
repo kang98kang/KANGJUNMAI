@@ -1,26 +1,23 @@
-import React from "react";
-import QuantityControl from "../../Component/QuantityControl";
-import "./Cart.css";
+import React from 'react';
+import { useCart } from '../../contexts/CartContext';
 
-function CartItem({ item, onUpdateQuantity, onRemove }) {
-  const handleQuantityChange = (newQuantity) => {
-    onUpdateQuantity(item.id, newQuantity);
-  };
+function CartItem({ item }) {
+  const { updateCartItemQuantity, removeFromCart } = useCart();
 
   return (
     <div className="cart-item">
       <img src={item.image} alt={item.name} className="cart-item-image" />
       <div className="cart-item-details">
-        <div className="cart-item-name">{item.name}</div>
-        <div className="cart-item-price">가격: ${item.price.toFixed(2)}</div>
-        <QuantityControl
-          initialQuantity={item.quantity}
-          onQuantityChange={handleQuantityChange}
-        />
+        <h3>{item.name}</h3>
+        <p>€{item.price}</p>
       </div>
-      <button className="cart-item-remove" onClick={() => onRemove(item.id)}>
-        삭제
-      </button>
+      <div className="cart-item-quantity">
+        <button onClick={() => updateCartItemQuantity(item.id, item.quantity - 1)}>-</button>
+        <span>{item.quantity}</span>
+        <button onClick={() => updateCartItemQuantity(item.id, item.quantity + 1)}>+</button>
+      </div>
+      <p className="cart-item-total">€{item.price * item.quantity}</p>
+      <button className="remove-item" onClick={() => removeFromCart(item.id)}>삭제</button>
     </div>
   );
 }
