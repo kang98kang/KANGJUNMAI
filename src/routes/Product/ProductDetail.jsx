@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation, Link, useNavigate } from 'react-router-dom';
-import { useCart } from '../../contexts/CartContext';
-import './ProductDetail.css';
+import React, { useState, useEffect } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useCart } from "../../contexts/CartContext";
+import "./ProductDetail.css";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 function ProductDetail() {
   const [product, setProduct] = useState(null);
@@ -13,29 +14,27 @@ function ProductDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    
-    
     const fetchProduct = async () => {
       try {
         setLoading(true);
         const searchParams = new URLSearchParams(location.search);
-        const productId = searchParams.get('id');
+        const productId = searchParams.get("id");
 
-        const response = await fetch('/data/products.json');
+        const response = await fetch("/data/products.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        const foundProduct = data.find(p => p.id === parseInt(productId));
+        const foundProduct = data.find((p) => p.id === parseInt(productId));
 
         if (foundProduct) {
           setProduct(foundProduct);
         } else {
-          setError('제품을 찾을 수 없습니다.');
+          setError("제품을 찾을 수 없습니다.");
         }
       } catch (error) {
-        console.error('상품 정보를 가져오는데 실패했습니다:', error);
-        setError('상품 정보를 불러올 수 없습니다. 나중에 다시 시도해주세요.');
+        console.error("상품 정보를 가져오는데 실패했습니다:", error);
+        setError("상품 정보를 불러올 수 없습니다. 나중에 다시 시도해주세요.");
       } finally {
         setLoading(false);
       }
@@ -46,15 +45,16 @@ function ProductDetail() {
 
   if (loading) return <div className="loading">로딩 중...</div>;
   if (error) return <div className="error">{error}</div>;
-  if (!product) return <div className="no-product">제품을 찾을 수 없습니다.</div>;
+  if (!product)
+    return <div className="no-product">제품을 찾을 수 없습니다.</div>;
 
   const handleQuantityChange = (change) => {
-    setQuantity(prev => Math.max(1, prev + change));
+    setQuantity((prev) => Math.max(1, prev + change));
   };
 
   const handleAddToCart = () => {
     addToCart({ ...product, quantity });
-    navigate('/Cart');
+    navigate("/Cart");
   };
   return (
     <div className="product-detail">
@@ -73,10 +73,14 @@ function ProductDetail() {
           </ul>
         )}
         <div className="quantity-selector">
-        <button onClick={() => handleQuantityChange(-1)}>-</button>
-        <span>{quantity}</span>
-        <button onClick={() => handleQuantityChange(1)}>+</button>
-      </div>
+          <button onClick={() => handleQuantityChange(-1)}>
+            <FaMinus />
+          </button>
+          <span>{quantity}</span>
+          <button onClick={() => handleQuantityChange(1)}>
+            <FaPlus />
+          </button>
+        </div>
         <button className="add-to-cart" onClick={handleAddToCart}>
           <Link to="/Cart">장바구니에 추가</Link>
         </button>
