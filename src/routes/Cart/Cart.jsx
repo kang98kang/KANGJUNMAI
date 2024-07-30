@@ -18,7 +18,7 @@ function Cart() {
             <span>수량</span>
             <span>소계</span>
           </div>
-          {cartItems.map(item => (
+          {cartItems.map((item) => (
             <CartItem key={item.id} item={item} />
           ))}
           <div className="cart-total">
@@ -26,7 +26,7 @@ function Cart() {
             <textarea placeholder="내용을 입력해주세요."></textarea>
           </div>
           <div className="cart-total">
-            <span>총계: {getTotalPrice()}원</span>
+            <span>총계: {getTotalPrice()} 원</span>
             <p>세금 및 국제 배송대행비 포함</p>
           </div>
           <button className="checkout-button">결제하기</button>

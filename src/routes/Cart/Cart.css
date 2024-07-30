@@ -42,10 +42,6 @@
 }
 
 .cart-item-quantity button {
-  width: 30px;
-  height: 30px;
-  background-color: #f0f0f0;
-  border: none;
   cursor: pointer;
 }
 
@@ -78,7 +74,7 @@
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   font-size: 18px;
